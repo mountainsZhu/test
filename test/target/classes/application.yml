@@ -1,0 +1,13 @@
+server:
+  port: 9000
+mybatis:
+  type-aliases-package: com.zss.po
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  config-location: classpath:mybatis/mybatis-config.xml
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://39.107.76.86:3306/testdb?useSSL=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: testdb
+    password: zss123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
