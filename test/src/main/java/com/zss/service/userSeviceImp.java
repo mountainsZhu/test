@@ -26,12 +26,12 @@ public class userSeviceImp implements userService{
     @Override
     public List<User> playRandomGame() {
         List<User> userList = userDao.searchAllUsers();
-        if(userList.size()<3) return null;
+        if(userList.size()<3) return null;  //todo 一般来所不能省去单if的大括号
         int userAmount = userList.size();
         List<User> winUserList = new ArrayList<>();
         //产生对应数量的随机数
         List<Integer> randList =  randomUtil.getIntRandom(0,userAmount,3);
-        for (int i = 0; i < randList.size(); i++) {
+        for (int i = 0; i < randList.size(); i++) {  //todo 同理 对数据集进行空值判断 ，尝试用迭代器来进行循环数据处理
             int index = randList.get(i);
             winUserList.add(userList.get(index));
         }

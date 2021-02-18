@@ -1,4 +1,4 @@
-package com.zss.NormalClass;
+package com.zss.NormalClass;  //todo 包名首字母小写
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
